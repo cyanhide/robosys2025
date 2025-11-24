@@ -1,24 +1,18 @@
 #!/usr/bin/python3
-# SPDX-FileCopyrightText: 2025 Hidenori Koseki
-# SPDX-License-Identifier:BSD-3-Clause
+#SPDX-FileCopyrightText: 2025 Hidenori Koseki
+#SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 
-def tonum(s):
-    try:
-        return int(s)
-    except:
-        return float(s)
-
-
-
-
-
 ans =0
-for line in sys.stdin:
+
+for etc in sys.stdin:
     try:
-        ans += int(line)
-    except:
-        ans += float(line)
+        ans += int(etc)
+    except: 
+        ans += float(etc) 
+
+# 3桁区切りで結果を出力
+ans = '{:,}'.format(ans)
 
 print(ans)
