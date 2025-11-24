@@ -8,11 +8,11 @@ ans =0
 
 for etc in sys.stdin:
     try:
-        ans += int(etc)
+        ans += int(ec)
     except: 
-        ans += float(etc) 
+        ans += float(ec) 
 
-# 3桁区切りで結果を出力
-ans = '{:,}'.format(ans)
+
+ans = '{:,}'.format(ans)#3桁区切りで結果を出力
 
 print(ans)
