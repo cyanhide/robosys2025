@@ -1,6 +1,5 @@
 # plusコマンド
-[![test](https://github.com/cyanhide/robosys2025/actions/workflows/test.yml/badge.svg)]
-
+![test](https://github.com/cyanhide/robosys2025/actions/workflows/test.yml/badge.svg)
 1から任意の数nまでの数字をすべて足す. 足した数字を三桁区切りで出力する.
 
 ## 必要なソフトウェア
