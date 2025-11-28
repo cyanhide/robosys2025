@@ -37,6 +37,6 @@ $ chmod +x plus
 ## ライセンス ##
 * このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます.
 * このパッケージのコードは, 下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）の一部を本人の許可を得て自身の著作としたものです. 
-	* [robosys2025/lesson5.md](https://github.com/ryuichiueda/slides_marp/blob/67e3251ff20904bf2b3d32d32c1017cb80daac13/robosys2025/lesson6.md)
+	* [robosys2025/lesson5.md](https://ryuichiueda.github.io/slides_marp/robosys2025/lesson5.html)
 
 ©2025 Hidenori Koseki
