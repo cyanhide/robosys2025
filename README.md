@@ -1,7 +1,7 @@
 # plusコマンド
 ![test](https://github.com/cyanhide/robosys2025/actions/workflows/test.yml/badge.svg)
 
-1から任意の数nまでの数字をすべて足す. 足した数字を三桁区切りで出力する.
+指定した正の整数 n に対して1からnまでの整数の合計を計算し、結果を三桁区切りで出力する。
 
 ## 必要なソフトウェア
 * python
@@ -21,7 +21,7 @@ $ ./plus < nums
 ```
 $ git clone https://github.com/cyanhide/robosys2025.git
 ```
-* robosys2025ディレクトリを開く.
+* robosys2025ディレクトリに移動.
 ```
 $ cd robosys2025
 ```
@@ -31,8 +31,12 @@ $ cd robosys2025
 $ chmod +x plus
 ```
 
-## テスト環境 
-* Ubuntu20.04
+## テスト環境   
+以下の環境で動作確認を行っています。
+
+* OS: Ubuntu 20.04
+* 実行環境: GitHub Actions
+
 
 ## ライセンス ##
 * このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます.
@@ -40,7 +44,7 @@ $ chmod +x plus
 	* [ryuichiueda/robosys2025/lesson4.md](https://github.com/ryuichiueda/slides_marp/blob/67e3251ff20904bf2b3d32d32c1017cb80daac13/robosys2025/lesson4.md)
 	* [ryuichiueda/robosys2025/lesson5.md](https://github.com/ryuichiueda/slides_marp/blob/67e3251ff20904bf2b3d32d32c1017cb80daac13/robosys2025/lesson5.md)
 
-©2025 Hidenori Koseki
+2025 Hidenori Koseki
 
 
 
