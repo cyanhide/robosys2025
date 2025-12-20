@@ -1,7 +1,7 @@
 # plusコマンド
 ![test](https://github.com/cyanhide/robosys2025/actions/workflows/test.yml/badge.svg)
 
-##概要
+## 概要
 標準入力またはファイルから数値を読み込み、合計・平均・個数を計算し、
 結果を三桁区切りで出力するコマンド。 
 
