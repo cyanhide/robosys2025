@@ -1,18 +1,50 @@
 #!/usr/bin/python3
-#SPDX-FileCopyrightText: 2025 Hidenori Koseki
-#SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2025 Hidenori Koseki
+# SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 
-ans =0
+mode = "--sum"
+args = sys.argv[1:]
 
-for etc in sys.stdin:
-    try:
-        ans += int(etc) 
-    except: 
-        ans += float(etc)
+# オプション解析（自前・最小）
+if len(args) > 0 and args[0].startswith("--"):
+    if args[0] in ("--sum", "--avg", "--count"):
+        mode = args[0]
+        args = args[1:]
+    else:
+        print("Usage: plus [--sum|--avg|--count] [file ...]", file=sys.stderr)
+        sys.exit(1)
 
-ans = '{:,}'.format(ans)#3桁区切りで結果を出力 
+values = []
 
-print(ans)
+# 入力読み込み（stdin または file）
+if len(args) == 0:
+    for etc in sys.stdin:
+        values.append(float(etc))
+else:
+    for fname in args:
+        with open(fname) as f:
+            for line in f:
+                values.append(float(etc))
+
+# 空入力は自前でエラー
+if len(values) == 0:
+    raise ValueError("no input")
+
+
+
+# 計算
+if mode == "--sum":
+    result = sum(values)
+elif mode == "--avg":
+    result = sum(values) / len(values)
+elif mode == "--count":
+    result = len(values)
+
+#結果
+if result == int(result):
+    print('{:,}'.format(int(result)))
+else:
+    print('{:,}'.format(result))
 
