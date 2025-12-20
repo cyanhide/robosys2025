@@ -15,3 +15,4 @@ for etc in sys.stdin:
 ans = '{:,}'.format(ans)#3桁区切りで結果を出力 
 
 print(ans)
+
