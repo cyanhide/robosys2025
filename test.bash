@@ -23,16 +23,20 @@ out=$(seq 10000 | ./plus)
 [ "${out}" = "50,005,000" ] || ng ${LINENO}
 
 ### 文字を含むとき ###
-out=$(seq あ | ./plus)
-[ "$?" = 0 ] || ng ${LINENO}
+out=$(echo あ | ./plus)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
 
 ### 記号を含むとき ###
-out=$(seq . | ./plus)
-[ "$?" = 0 ] || ng ${LINENO}
+out=$(echo . | ./plus)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
 
-### 空文字の判定 ###
-out=$(seq | ./plus)
-[ "$?" = 0 ] || ng ${LINENO}
+
+### 空入力を含むとき　###
+out=$(echo | ./plus)
+[ "$?" = 1 ]      || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo OK
 

@@ -1,18 +1,37 @@
 #!/usr/bin/python3
-#SPDX-FileCopyrightText: 2025 Hidenori Koseki
-#SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2025 Hidenori Koseki
+# SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 
-ans =0
+values = []
 
 for etc in sys.stdin:
     try:
-        ans += int(etc)
-    except: 
-        ans += float(etc) 
+        values.append(float(etc))
+    except:
+        pass
 
+if len(values) == 0:
+    print("no numeric input", file=sys.stderr)
+    sys.exit(1)
 
-ans = '{:,}'.format(ans)#3桁区切りで結果を出力
+total = sum(values)
+count = len(values)
+avg = total / count
+minimum = min(values)
+maximum = max(values)
 
-print(ans)
+# 3桁区切り・整数は小数なし、float は小数あり
+def format_number(x):
+    if x == int(x):
+        return "{:,}".format(int(x))
+    else:
+        return "{:,}".format(x)
+
+print(f"count: {format_number(count)}")
+print(f"sum: {format_number(total)}")
+print(f"average: {format_number(avg)}")
+print(f"min: {format_number(minimum)}")
+print(f"max: {format_number(maximum)}")
+
