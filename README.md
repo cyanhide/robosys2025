@@ -2,9 +2,7 @@
 ![test](https://github.com/cyanhide/robosys2025/actions/workflows/test.yml/badge.svg)
 
 ## 概要
-標準入力またはファイルから数値を読み込み、合計・平均・個数を計算し、
-結果を三桁区切りで出力するコマンド。 
-
+標準入力またはファイルから数値を読み込み、合計・平均・個数を計算するコマンド。 
 
 ## 使い方
 ```
@@ -13,17 +11,14 @@ plus [--sum | --avg | --count] [file ...]
 * オプション省略時は --sum と同じ動作
 * 入力は 標準入力 または ファイル から読み込む
 
-## オプション一覧
-```
---sum
+- --sum
 入力された数値の合計を出力する
 
---avg
+- --avg
 入力された数値の平均を出力する
 
---count
+- --count
 入力された数値の個数を出力する
-```
 
 ## 使用例
 * 合計を求める
@@ -52,7 +47,7 @@ $ ./plus --count < nums
 3
 ```
 ## インストール方法
-* Githubやpythonが導入された環境で, 下記のコマンドを入力する.
+* GitHubやpythonが導入された環境で, 下記のコマンドを入力する.
 ```
 $ git clone https://github.com/cyanhide/robosys2025.git
 ```
@@ -70,7 +65,8 @@ $ chmod +x plus
 
 ## テスト環境   
 
-* Ubuntu 22.04.3 LTS
+* Ubuntu 20.04.5 LTS
+* GitHub Actions
 
 ## ライセンス ##
 * このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます.
@@ -78,5 +74,5 @@ $ chmod +x plus
 	* [ryuichiueda/robosys2025/lesson3.md](https://github.com/ryuichiueda/slides_marp/blob/270b1596ff22e81ebd9b158c4660dd64b9a83888/robosys2025/lesson3.md)
 	* [ryuichiueda/robosys2025/lesson6.md](https://github.com/ryuichiueda/slides_marp/blob/270b1596ff22e81ebd9b158c4660dd64b9a83888/robosys2025/lesson6.md)
 
-2025 Hidenori Koseki
+©2025 Hidenori Koseki
 
