@@ -2,7 +2,7 @@
 ![test](https://github.com/cyanhide/robosys2025/actions/workflows/test.yml/badge.svg)
 
 ## 概要
-標準入力またはファイルから数値を読み込み、合計・平均・個数を計算するコマンド。 
+標準入力またはリダイレクトされたファイルから数値を読み込み、合計・平均・個数を計算するコマンド。
 
 ## 使い方
 ```
@@ -37,7 +37,8 @@ $ seq 10000 | ./plus --count
 10,000
 ```
 
-* ファイル入力の場合
+* ファイルから標準入力へリダイレクト
+
 ```
 $ ./plus --sum < nums
 6,000
@@ -47,7 +48,7 @@ $ ./plus --count < nums
 3
 ```
 ## インストール方法
-* GitHubやpythonが導入された環境で, 下記のコマンドを入力する.
+* GitHubやpythonが導入された環境で, 下記のコマンドを入力する。
 ```
 $ git clone https://github.com/cyanhide/robosys2025.git
 ```
@@ -55,7 +56,7 @@ $ git clone https://github.com/cyanhide/robosys2025.git
 ```
 $ cd robosys2025
 ```
-* 実行方法に関しては、上記の使い方を参照してください.実行権限が付与されていない場合は, 下記コマンドを入力してください.
+* 実行方法に関しては、上記の使い方を参照してください。実行権限が付与されていない場合は, 下記コマンドを入力してください。
 ```
 $ chmod +x plus
 ```
@@ -69,8 +70,9 @@ $ chmod +x plus
 * GitHub Actions
 
 ## ライセンス ##
-* このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます.
-* このパッケージのコードは, 下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）の一部を本人の許可を得て自身の著作としたものです. 
+
+* このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます。 
+* このパッケージのコードは, 下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）の一部を本人の許可を得て自身の著作としたものです。 
 	* [ryuichiueda/robosys2025/lesson3.md](https://github.com/ryuichiueda/slides_marp/blob/270b1596ff22e81ebd9b158c4660dd64b9a83888/robosys2025/lesson3.md)
 	* [ryuichiueda/robosys2025/lesson6.md](https://github.com/ryuichiueda/slides_marp/blob/270b1596ff22e81ebd9b158c4660dd64b9a83888/robosys2025/lesson6.md)
 
